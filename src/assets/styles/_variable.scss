@@ -1,0 +1,97 @@
+$font_Ubuntu: "Ubuntu", sans-serif;
+
+$lightFont: 300;
+$regularFont: 400;
+$mediumFont: 500;
+$boldFont: 700;
+
+$font32: 32px;
+$font24: 24px;
+$font22: 22px;
+$font20: 20px;
+$font18: 18px;
+$font16: 16px;
+$font14: 14px;
+$font13: 13px;
+
+$lineHeight36: 36px;
+$lineHeight28: 28px;
+$lineHeight24: 24px;
+$lineHeight22: 22px;
+$lineHeight20: 20px;
+
+$white: #ffffff;
+$black: #000000;
+
+$gray1: #1f2937;
+$gray2: #374151;
+$gray3: #4b5563;
+$gray4: #6b7280;
+$gray5: #9ca3af;
+$gray6: #d1d5db;
+$gray7: #f3f4f6;
+
+$primary: #116acc;
+$secondary: #182233;
+$secondary2: #b3cee2;
+$secondary3: #d9dde7;
+
+$info: #a0c3ff;
+$success: #76ca66;
+$warning: #fbc756;
+$error: #ba0000;
+
+@mixin fontStyle(
+  $fontFamily: null,
+  $size: null,
+  $weight: null,
+  $color: null,
+  $lineHeight: null,
+  $margin: null,
+  $padding: null
+) {
+  @if $fontFamily != null {
+    font-family: $fontFamily;
+  }
+  @if $size != null {
+    font-size: $size;
+  }
+  @if $weight != null {
+    font-weight: $weight;
+  }
+  @if $color != null {
+    color: $color;
+  }
+  @if $lineHeight != null {
+    line-height: $lineHeight;
+  }
+  @if $margin != null {
+    margin: $margin;
+  }
+  @if $padding != null {
+    padding: $padding;
+  }
+}
+
+@mixin transitionForAll($time: 0.3s, $transProp: ease) {
+  -webkit-transition: all $time $transProp;
+  -moz-transition: all $time $transProp;
+  -o-transition: all $time $transProp;
+  transition: all $time $transProp;
+  transition: all $time $transProp;
+}
+
+@keyframes shake {
+  0% {
+    margin-left: 0rem;
+  }
+  25% {
+    margin-left: 0.25rem;
+  }
+  75% {
+    margin-left: -0.25rem;
+  }
+  100% {
+    margin-left: 0rem;
+  }
+}
